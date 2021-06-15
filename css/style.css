@@ -251,7 +251,7 @@ header {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  overflow: hidden;
+  min-width: 0;
 }
 .season-collection .season-watch {
   width: 100%;
@@ -277,43 +277,6 @@ header {
   background: #fff;
   bottom: -49px;
   left: 73px;
-}
-.season-collection .season-watch .new-post__watch {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-.season-collection .season-watch .new-post__watch .card-watch .watch {
-  padding: 55px 22px 56px 23px;
-  background: #191B1C;
-  margin-bottom: 25px;
-}
-.season-collection .season-watch .new-post__watch .card-watch h4 {
-  font-size: 18px;
-  font-family: "Playfair Display", serif;
-  color: #fff;
-  line-height: 1.33;
-  font-weight: 400;
-  margin-bottom: 5px;
-  text-align: left;
-}
-.season-collection .season-watch .new-post__watch .card-watch p {
-  font-size: 16px;
-  font-family: "Playfair Display", serif;
-  color: #fff;
-  line-height: 1.33;
-  font-weight: 400;
-  margin-bottom: 0;
-  text-align: left;
 }
 
 .collection-photo {
@@ -681,4 +644,62 @@ footer .footer-info .mailling .input-mail button {
   letter-spacing: 0.05em;
   margin-left: -4px;
   cursor: pointer;
+}
+
+.slider {
+  position: relative;
+  padding: 0 60px;
+}
+.slider .slick-arrow {
+  position: absolute;
+  top: 50%;
+  margin-top: -40px;
+  z-index: 10;
+  font-size: 0;
+  width: 40px;
+  height: 50px;
+  border-style: none;
+}
+.slider .slick-prev {
+  left: 0;
+  background: url(../img/arrow-left.svg) 0 0/100% no-repeat;
+}
+.slider .slick-next {
+  right: 0;
+  background: url(../img/arrow-right.svg) 0 0/100% no-repeat;
+}
+.slider .slick-list {
+  overflow: hidden;
+}
+.slider .slick-list .slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.slider .slick-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.slider .slick-dots li {
+  list-style: none;
+  margin: 0 10px;
+}
+.slider .slick-dots li.slick-active > button {
+  background-color: transparent;
+  border: 1px solid #fff;
+}
+.slider .slick-dots li button {
+  font-size: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  border-style: none;
 }

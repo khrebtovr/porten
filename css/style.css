@@ -534,6 +534,8 @@ footer .footer-info {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 footer .footer-info .info-shop h2 {
   font-size: 24px;

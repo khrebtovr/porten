@@ -1,0 +1,66 @@
+@media screen and (max-width:1070px) {
+    .collection-photo {
+        flex-direction: column;
+    }
+    .collection-photo .collection-left__img {
+        width: 100%;
+        height: 500px;
+    }
+    .collection-photo .collection-right__img {
+        width: 100%;
+        height: 500px;
+    }
+    .new-post .new-post__watch {
+        justify-content: space-around;
+    }
+    .new-post .new-post__watch .card-watch:nth-child(7) {
+        display: none;
+    }
+    .new-post .new-post__watch .card-watch:nth-child(8) {
+        display: none;
+    }
+    .our-brand .our-brand__photo div {
+        flex-basis: 50%;
+    }
+    .footer-info .mailling {
+        flex-basis: 50%;
+    }
+    .footer-info .category {
+        flex-basis: 50%;
+        order: 1;
+        margin-top: 30px;
+    }
+    .footer-info .info-shop {
+        flex-basis: 50%;
+    }
+    .season-collection .season-watch {
+        padding: 90px 40px;
+    }
+}
+
+@media screen and (max-width:810px) {
+    .header-top .time-work {
+        display: none;
+    }
+    .header-nav .nav__block {
+        display: none;
+    }
+    .season-collection .season-watch {
+        padding: 90px 10px;
+    }
+    .new-post .new-post__watch {
+        justify-content: space-around;
+    }
+    .footer-info .mailling {
+        flex-basis: 50%;
+        /* margin-top: 30px; */
+    }
+    .footer-info .category {
+        flex-basis: 50%;
+        order: -1;
+        margin-top: 0;
+    }
+    .footer-info .info-shop {
+        flex-basis: 50%;
+    }
+}

@@ -251,9 +251,10 @@ header {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  overflow: hidden;
 }
 .season-collection .season-watch {
-  width: 55%;
+  width: 100%;
   padding: 90px 80px;
   text-align: center;
 }
@@ -281,9 +282,8 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -315,59 +315,8 @@ header {
   margin-bottom: 0;
   text-align: left;
 }
-.season-collection .season-collection__img {
-  width: 45%;
-  height: 730px;
-  background: url(../img/new-collection.png) no-repeat left top;
-  background-size: cover;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-.season-collection .season-collection__img h2 {
-  font-size: 36px;
-  font-family: "Playfair Display", serif;
-  color: #fff;
-  line-height: 1.33;
-  font-weight: 700;
-  text-transform: uppercase;
-  position: relative;
-  display: inline-block;
-  margin-bottom: 100px;
-}
-.season-collection .season-collection__img h2::after {
-  content: "";
-  position: absolute;
-  width: 120px;
-  height: 1px;
-  background: #fff;
-  bottom: -49px;
-  left: 128px;
-}
-.season-collection .season-collection__img a {
-  font-size: 18px;
-  font-weight: 400;
-  font-family: "PT Sans", sans-serif;
-  color: #fff;
-  line-height: 1.29;
-  padding: 12px 28px;
-  text-transform: uppercase;
-  border: 1px solid white;
-  letter-spacing: 0.1em;
-  margin-bottom: 100px;
-}
 
-.collection-last {
+.collection-photo {
   background: #000;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -385,18 +334,26 @@ header {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-.collection-last .collection-last__img {
-  width: 45.8%;
-  height: 600px;
+.collection-photo .collection-left__img {
+  width: 50%;
+  height: 730px;
   background: url(../img/collection-2018.png) no-repeat center top;
   background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
-.collection-last .collection-last__block {
-  width: 54.2%;
-  padding: 90px 0;
-  text-align: center;
-}
-.collection-last .collection-last__block h2 {
+.collection-photo .collection-left__img h2 {
   font-size: 36px;
   font-family: "Playfair Display", serif;
   color: #fff;
@@ -405,9 +362,9 @@ header {
   text-transform: uppercase;
   position: relative;
   display: inline-block;
-  margin-bottom: 72px;
+  margin-bottom: 100px;
 }
-.collection-last .collection-last__block h2::after {
+.collection-photo .collection-left__img h2::after {
   content: "";
   position: absolute;
   width: 120px;
@@ -416,17 +373,57 @@ header {
   bottom: -49px;
   left: 101px;
 }
-.collection-last .collection-last__block p {
-  font-size: 14px;
+.collection-photo .collection-left__img a {
+  font-size: 18px;
   font-weight: 400;
   font-family: "PT Sans", sans-serif;
   color: #fff;
   line-height: 1.29;
-  text-align: center;
-  line-height: 1.5;
-  margin-bottom: 83px;
+  padding: 12px 28px;
+  text-transform: uppercase;
+  border: 1px solid white;
+  letter-spacing: 0.1em;
 }
-.collection-last .collection-last__block a {
+.collection-photo .collection-right__img {
+  width: 50%;
+  height: 730px;
+  background: url(../img/new-collection.png) no-repeat left top;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.collection-photo .collection-right__img h2 {
+  font-size: 36px;
+  font-family: "Playfair Display", serif;
+  color: #fff;
+  line-height: 1.33;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 100px;
+}
+.collection-photo .collection-right__img h2::after {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 1px;
+  background: #fff;
+  bottom: -49px;
+  left: 128px;
+}
+.collection-photo .collection-right__img a {
   font-size: 18px;
   font-weight: 400;
   font-family: "PT Sans", sans-serif;
@@ -560,7 +557,7 @@ footer {
   background-size: cover;
 }
 footer .footer-info {
-  padding: 80px 0 101px;
+  padding: 100px 0 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

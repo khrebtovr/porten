@@ -143,8 +143,9 @@
             background: #000;
             @include flex(space-between);
             flex-wrap: wrap;
+            overflow: hidden;
             .season-watch {
-                width: 55%;
+                width: 100%;
                 padding: 90px 80px;
                 text-align: center;
                 h2 {
@@ -154,7 +155,7 @@
                     }
                 }
                 .new-post__watch {
-                    @include flex(space-between);
+                    @include flex(space-around);
                     // flex-wrap: wrap;
                     .card-watch {
                         .watch {
@@ -173,16 +174,23 @@
                     }
                 }
             }
-            .season-collection__img {
-                width: 45%;
+        }
+        
+        // Коллекция 2018
+        .collection-photo {
+            background: #000;
+            @include flex(space-between);
+            flex-wrap: wrap;
+            .collection-left__img {
+                width: 50%;
                 height: 730px;
-                background: url(../img/new-collection.png) no-repeat left top;
+                background: url(../img/collection-2018.png) no-repeat center top;
                 background-size: cover;
-                @include flex($justify: flex-end, $align: center, $direction: column);
+                @include flex($justify: center, $align: center, $direction: column);
                 h2 {
                     @include Playfairh($mb: 100px);
                     &::after {
-                        @include underline(128px);
+                        @include underline(101px);
                     }
                 }
                 a {
@@ -191,37 +199,19 @@
                     text-transform: uppercase;
                     border: 1px solid white;
                     letter-spacing: 0.1em;
-                    margin-bottom: 100px;
                 }
             }
-        }
-        
-        // Коллекция 2018
-        .collection-last {
-            background: #000;
-            @include flex(space-between);
-            flex-wrap: wrap;
-            .collection-last__img {
-                width: 45.8%;
-                height: 600px;
-                background: url(../img/collection-2018.png) no-repeat center top;
+            .collection-right__img {
+                width: 50%;
+                height: 730px;
+                background: url(../img/new-collection.png) no-repeat left top;
                 background-size: cover;
-            }
-            .collection-last__block {
-                width: 54.2%;
-                padding: 90px 0;
-                text-align: center;
+                @include flex($justify: center, $align: center, $direction: column);
                 h2 {
-                    @include Playfairh($mb: 72px);
+                    @include Playfairh($mb: 100px);
                     &::after {
-                        @include underline(101px);
+                        @include underline(128px);
                     }
-                }
-                p {
-                    @include fontSans($size: 14px);
-                    text-align: center;
-                    line-height: 1.5;
-                    margin-bottom: 83px;
                 }
                 a {
                     @include fontSans($size: 18px);
@@ -293,7 +283,7 @@
             background: url(../img/footer-img.png) no-repeat center center;
             background-size: cover;
             .footer-info {
-                padding: 80px 0 101px;
+                padding: 100px 0 100px;
                 @include flex($justify: space-between, $direction: row, $align: start);
                 .info-shop {
                     h2 {

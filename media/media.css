@@ -43,6 +43,9 @@
                    .header-top .time-work {
                        display: none;
                    }
+                   .slider{
+                       padding: 0 20px;
+                   }
                    .header-top .work-in-week {
                        display: none;
                    }
@@ -73,9 +76,9 @@
                    }
                }
                
-               @media screen and (max-width: 480px) {
+               @media screen and (max-width: 540px) {
                    .new-post h2::after {
-                       left: 140px;
+                    left: calc(50% - 60px);
                    }
                    .new-post .new-post__watch .card-watch:nth-child(5) {
                        display: none;
@@ -84,7 +87,7 @@
                        display: none;
                    }
                    .our-brand .our-brand__photo {
-                       justify-content: center;
+                       justify-content: center !important;
                    }
                    .collection-photo .collection-right__img h2 {
                        text-align: center;

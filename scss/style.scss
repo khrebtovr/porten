@@ -91,6 +91,12 @@
             @include flex($justify: space-between);
             padding: 25px 0;
             position: relative;
+            .logo{
+                img{
+                    position: fixed;
+                    top: 66px;
+                }
+            }
             .nav__block ul {
                 @include flex($justify: center);
                 li {
@@ -140,11 +146,11 @@
                 align-items: center;
                 position: fixed;
                 right: 40px;
-                top: 70px;
+                top: 60px;
                 width: 50px;
                 height: 35px;
                 cursor: pointer;
-                z-index: 1;
+                z-index: 1000;
                 &>span,
                 &>span::before,
                 &>span::after {
@@ -165,6 +171,7 @@
                 }
             }
             .menu__box {
+                z-index: 100;
                 display: block;
                 position: fixed;
                 visibility: hidden;

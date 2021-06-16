@@ -1,66 +1,95 @@
-@media screen and (max-width:1070px) {
-    .collection-photo {
-        flex-direction: column;
-    }
-    .collection-photo .collection-left__img {
-        width: 100%;
-        height: 500px;
-    }
-    .collection-photo .collection-right__img {
-        width: 100%;
-        height: 500px;
-    }
-    .new-post .new-post__watch {
-        justify-content: space-around;
-    }
-    .new-post .new-post__watch .card-watch:nth-child(7) {
-        display: none;
-    }
-    .new-post .new-post__watch .card-watch:nth-child(8) {
-        display: none;
-    }
-    .our-brand .our-brand__photo div {
-        flex-basis: 50%;
-    }
-    .footer-info .mailling {
-        flex-basis: 50%;
-    }
-    .footer-info .category {
-        flex-basis: 50%;
-        order: 1;
-        margin-top: 30px;
-    }
-    .footer-info .info-shop {
-        flex-basis: 50%;
-    }
-    .season-collection .season-watch {
-        padding: 90px 40px;
-    }
-}
-
-@media screen and (max-width:810px) {
-    .header-top .time-work {
-        display: none;
-    }
-    .header-nav .nav__block {
-        display: none;
-    }
-    .season-collection .season-watch {
-        padding: 90px 10px;
-    }
-    .new-post .new-post__watch {
-        justify-content: space-around;
-    }
-    .footer-info .mailling {
-        flex-basis: 50%;
-        /* margin-top: 30px; */
-    }
-    .footer-info .category {
-        flex-basis: 50%;
-        order: -1;
-        margin-top: 0;
-    }
-    .footer-info .info-shop {
-        flex-basis: 50%;
-    }
-}
+               @media screen and (max-width:1070px) {
+                   .collection-photo {
+                       flex-direction: column;
+                   }
+                   .collection-photo .collection-left__img {
+                       width: 100%;
+                       height: 500px;
+                   }
+                   .collection-photo .collection-right__img {
+                       width: 100%;
+                       height: 500px;
+                   }
+                   .new-post .new-post__watch {
+                       justify-content: space-around;
+                   }
+                   .new-post .new-post__watch .card-watch:nth-child(7) {
+                       display: none;
+                   }
+                   .new-post .new-post__watch .card-watch:nth-child(8) {
+                       display: none;
+                   }
+                   .our-brand .our-brand__photo div {
+                       flex-basis: 50%;
+                   }
+                   .footer-info .mailling {
+                       flex-basis: 50% !important;
+                       padding-right: 35px;
+                   }
+                   .footer-info .category {
+                       flex-basis: 45% !important;
+                       order: 1;
+                       margin-top: 30px;
+                   }
+                   .footer-info .info-shop {
+                       flex-basis: 47% !important;
+                   }
+                   .season-collection .season-watch {
+                       padding: 90px 40px;
+                   }
+               }
+               
+               @media screen and (max-width:768px) {
+                   .header-top .time-work {
+                       display: none;
+                   }
+                   .header-top .work-in-week {
+                       display: none;
+                   }
+                   .hamburger-menu {
+                       display: block;
+                   }
+                   .header-nav .nav__block {
+                       display: none;
+                   }
+                   .season-collection .season-watch {
+                       padding: 90px 10px;
+                   }
+                   .new-post .new-post__watch {
+                       justify-content: space-around;
+                   }
+                   .footer-info {
+                       flex-direction: column !important;
+                   }
+                   .footer-info .mailling {
+                       margin-top: 30px;
+                       order: 3;
+                   }
+                   .footer-info .category {
+                       margin-top: 30px;
+                   }
+                   .offer-porten__text {
+                       padding: 0 20px;
+                   }
+               }
+               
+               @media screen and (max-width: 480px) {
+                   .new-post h2::after {
+                       left: 140px;
+                   }
+                   .new-post .new-post__watch .card-watch:nth-child(5) {
+                       display: none;
+                   }
+                   .new-post .new-post__watch .card-watch:nth-child(6) {
+                       display: none;
+                   }
+                   .our-brand .our-brand__photo {
+                       justify-content: center;
+                   }
+                   .collection-photo .collection-right__img h2 {
+                       text-align: center;
+                   }
+                   .mailling .input-mail input {
+                       width: 160px;
+                   }
+               }

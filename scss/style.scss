@@ -90,6 +90,7 @@
         .header-nav__block {
             @include flex($justify: space-between);
             padding: 25px 0;
+            position: relative;
             .nav__block ul {
                 @include flex($justify: center);
                 li {
@@ -113,6 +114,86 @@
             }
         }
         
+        // бургер меню
+        .hamburger-menu {
+            display: none;
+            #menu__toggle {
+                opacity: 0;
+                &:checked~.menu__btn>span {
+                    transform: rotate(45deg);
+                }
+                &:checked~.menu__btn>span::before {
+                    top: 0;
+                    transform: rotate(0);
+                }
+                &:checked~.menu__btn>span::after {
+                    top: 0;
+                    transform: rotate(90deg);
+                }
+                &:checked~.menu__box {
+                    visibility: visible;
+                    right: 0;
+                }
+            }
+            .menu__btn {
+                display: flex;
+                align-items: center;
+                position: fixed;
+                right: 40px;
+                top: 70px;
+                width: 50px;
+                height: 35px;
+                cursor: pointer;
+                z-index: 1;
+                &>span,
+                &>span::before,
+                &>span::after {
+                    display: block;
+                    position: absolute;
+                    width: 100%;
+                    height: 2px;
+                    background-color: #616161;
+                    transition-duration: .25s;
+                }
+                &>span::before {
+                    content: '';
+                    top: -10px;
+                }
+                &>span::after {
+                    content: '';
+                    top: 10px;
+                }
+            }
+            .menu__box {
+                display: block;
+                position: fixed;
+                visibility: hidden;
+                top: 0;
+                right: -100%;
+                width: 100%;
+                height: 100vh;
+                margin: 0;
+                padding: 140px 0;
+                list-style: none;
+                background-color: #ECEFF1;
+                box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+                transition-duration: .25s;
+                .menu__item {
+                    display: block;
+                    padding: 15px 45px;
+                    color: #333;
+                    font-family: 'Roboto', sans-serif;
+                    font-size: 20px;
+                    font-weight: 600;
+                    text-decoration: none;
+                    transition-duration: .25s;
+                    &:hover {
+                        background-color: #CFD8DC;
+                    }
+                }
+            }
+        }
+        
         .offer-bg {
             @include flex(center, column, center);
             background: url(../img/offer-photo.png) no-repeat center center;
@@ -131,10 +212,13 @@
                     margin-bottom: 23px;
                 }
             }
-            p {
-                @include fontSans( $size: 16px);
-                text-transform: uppercase;
-                text-align: center;
+            .offer-porten__text {
+                max-width: 730px;
+                p {
+                    @include fontSans( $size: 16px);
+                    text-transform: uppercase;
+                    text-align: center;
+                }
             }
         }
         
@@ -268,6 +352,8 @@
                 @include flex($justify: space-between, $direction: row, $align: start);
                 flex-wrap: wrap;
                 .info-shop {
+                    flex-basis: 40%;
+                    padding-right: 35px;
                     h2 {
                         @include fontPlayfair($size: 24px, $mb: 40px);
                         text-transform: uppercase;
@@ -280,7 +366,7 @@
                     }
                 }
                 .category {
-                    flex-basis: 332px;
+                    flex-basis: 28%;
                     h2 {
                         @include fontPlayfair($size: 24px, $mb: 40px);
                         text-transform: uppercase;
@@ -300,6 +386,7 @@
                     }
                 }
                 .mailling {
+                    flex-basis: 32%;
                     h2 {
                         @include fontPlayfair($size: 24px, $mb: 40px);
                         text-transform: uppercase;
@@ -365,7 +452,7 @@
                 overflow: hidden;
                 .slick-track {
                     display: flex;
-                    .slider__item {}
+                    // .slider__item {}
                 }
             }
             .slick-dots {

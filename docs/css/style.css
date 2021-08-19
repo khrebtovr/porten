@@ -10,7 +10,6 @@ body {
   font-family: "Playfair Display", serif;
   font-family: "PT Sans", sans-serif;
   color: #fff;
-  outline: none;
 }
 
 .container {
@@ -143,10 +142,6 @@ header {
   padding: 25px 0;
   position: relative;
 }
-.header-nav__block .logo img {
-  position: fixed;
-  top: 66px;
-}
 .header-nav__block .nav__block ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -188,6 +183,7 @@ header {
 }
 .hamburger-menu #menu__toggle {
   opacity: 0;
+  position: absolute;
 }
 .hamburger-menu #menu__toggle:checked ~ .menu__btn > span {
   -webkit-transform: rotate(45deg);
@@ -214,9 +210,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: fixed;
-  right: 40px;
-  top: 60px;
+  position: relative;
   width: 50px;
   height: 35px;
   cursor: pointer;
@@ -262,7 +256,7 @@ header {
   padding: 15px 45px;
   color: #333;
   font-family: "Roboto", sans-serif;
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 600;
   text-decoration: none;
   -webkit-transition-duration: 0.25s;
